@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html style="display: flex">
+  <head>
+    <meta charset="utf8" />
+    <style>
+      p {
+        font-size: 12px;
+        word-break: break-all;
+      }
+      .endpoint {
+        margin-block-end: 0px;
+        font-size: 14px;
+      }
+      .limit-reset-text {
+        margin-block-start: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>API Limit Meter</h1>
+    <div id="template" style="display: none;">
+      <div>
+        <p class="endpoint"></p>
+        <progress class="limit-progress"></progress>
+        <span class="limit-text">
+          <span class="limit-remain"></span>/<span class="limit-limit"></span>
+        </span>
+        <p class="limit-reset-text">Reset: <span class="limit-reset"></span></p>
+      </div>
+    </div>
+    <input type="button" value="Clear" id="clear-button"/>
+    <div id="content"></div>
+    <script src="panel.js"></script>
+  </body>
+</html>
